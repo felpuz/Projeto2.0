@@ -1,0 +1,87 @@
+body{
+    font-family: "Shadows Into Light", cursive;
+    background-color: #000000;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/six.jpg'); /* Adicione a URL da sua imagem aqui */
+    background-size: cover;
+    z-index: -1; 
+}
+
+.login{
+    width: 300px;
+    padding: 20px; 
+    background-color: rgba(82, 82, 82, 0.569); /*cor preto transparente*/
+    border: 1px solid #ccc; /*borda quase cinza*/
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /*sombra preta*/
+    text-align: center;
+    margin-top: 20%; /*margem pra baixo*/
+    margin-left: 40%; /*margem pra esquerda*/
+    transform: translateY(-50%);
+}
+
+.login label {
+    display: block; 
+    text-align: left; 
+    margin-bottom: 8px; 
+    color: #fff;
+    font-size: 130%;
+}
+
+.login input {
+    margin: 10px 0;
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.botao{
+    background-color: #fbff00ab;
+    color: #000000; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    transition: background-color 0.3s; 
+    font-family: "Shadows Into Light", cursive;
+    padding: 10px;
+    width: 50%;
+}
+
+.botao:hover {
+    background-color: #fbff0057; 
+}
+
+.divtelainicial{
+    font-size: 2rem;
+}
+
+.links a{
+    background-color: #b8b8b8;
+    color: #000000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;  
+}
+
+.links a:hover {
+    background-color: #555;
+}
+    
