@@ -7,16 +7,18 @@ body{
     text-align: center;
 }
 
-.background {
+.imagemfundo {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/six.jpg'); /* Adicione a URL da sua imagem aqui */
+    background-image: url('../img/six.jpg'); 
     background-size: cover;
+    background-position: center;
     z-index: -1; 
-}
+    filter: blur(4px);
+} 
 
 .login{
     width: 300px;
@@ -48,23 +50,6 @@ body{
     border-radius: 10px;
 }
 
-.botao{
-    background-color: #fbff00ab;
-    color: #000000; 
-    padding: 10px 15px; 
-    border: none; 
-    border-radius: 6px; 
-    cursor: pointer; 
-    font-size: 1rem; 
-    transition: background-color 0.3s; 
-    font-family: "Shadows Into Light", cursive;
-    padding: 10px;
-    width: 50%;
-}
-
-.botao:hover {
-    background-color: #fbff0057; 
-}
 
 .divtelainicial{
     font-size: 2rem;
@@ -84,4 +69,159 @@ body{
 .links a:hover {
     background-color: #555;
 }
+
+.semlogin{
+    margin-top: 10px;
+}
+
+.semlogin a{
+    color: rgba(14, 24, 170, 0.815);
+}
+
+.divtelacadastro{
+    width: 800px;
+    height: auto;
+    padding: 20px; 
+    background-color: rgba(82, 82, 82, 0.569); /*cor preto transparente*/
+    border: 1px solid #ccc; /*borda quase cinza*/
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /*sombra preta*/
+    text-align: center;
+    margin-left: 255px;
+}
+
+.diventradacadastro {
+    display: flex;
+     /*justify-content: space-between; Espaço entre label e input*/
+    align-items: center;
+    margin-bottom: 1px; /* Espaço entre os campos */
+}
+
+label {
+    flex: 1; /*a label irá ocupar um espaço da tela(não entendi muito)*/
+    text-align: left;
     
+}
+
+input {
+    flex: 1; /*a input irá ocupar um espaço da tela(não entendi muito)*/
+    padding: 5px;
+}
+
+.botao{
+    background-color: #53c053;
+    color: #000000;
+    font-size: 1rem;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    font-family: "Shadows Into Light", cursive;
+    padding: 10px;
+    width: 50%;
+    border: none;  
+}
+
+.botao:hover {
+    background-color: #53c05380;
+}
+.botaoentrar{
+    background-color: #fbff00ab;
+    color: #000000; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    transition: background-color 0.3s; 
+    font-family: "Shadows Into Light", cursive;
+    padding: 10px;
+    width: 50%;
+}
+
+.botaoentrar:hover {
+    background-color: #fbff0057; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.lateral {
+    width: 245px;
+    height: 100vh;
+    background-color: #333;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: -230px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.lateral:hover {
+    left: 0;
+}
+
+.lateral h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.lateral ul {
+    list-style-type: none;
+}
+
+.lateral ul li {
+    margin-bottom: 15px;
+}
+
+.lateral ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    padding: 10px;
+    background-color: #b8b8b8;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.lateral ul li a:hover {
+    background-color: #555;
+}
+
+
+.parallax-image {
+    height: 600px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}

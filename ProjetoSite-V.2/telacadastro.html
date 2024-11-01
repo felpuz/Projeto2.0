@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <title>Little Nightmares Oficial</title>
+</head>
+<body>
+
+     <h2>Cadastro</h2>
+     <p>cadastre-se em nosso site para você acompanhar mais</p>
+
+<div class="divtelacadastro">
+    <form id="cadastroForm">
+        <div class="diventradacadastro">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="digite seu nome completo aqui aqui" required><br><br>
+          </div>
+        <div class="diventradacadastro">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required><br><br>
+        </div>
+        <div class="diventradacadastro">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required><br><br>
+        </div>
+        <div class="diventradacadastro">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" placeholder="rua, bairro, cidade" required><br><br>
+        </div>
+        <div class="diventradacadastro">
+          <label for="idade">idade:</label>
+          <input type="number" id="idade" name="idade" placeholder="00 - 80" min="0" max="100" required><br><br>
+        </div>
+        <div class="diventradacadastro">
+          <label for="cpf">cpf:</label>
+          <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required><br><br>
+        </div>
+
+        <div class="links">
+            <button onclick="mostrarMensagem()" type="submit" class="botao">Cadastrar</button>
+            <a href="index.html" class="a1">Voltar</a>
+        </div>
+    </form>
+</div>
+
+
+    <p id="mensagem"></p>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
