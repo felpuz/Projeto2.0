@@ -12,24 +12,30 @@
 <body>
 
     <div class="imagemfundo"></div>
-    <div class="login">
-	<form action="index.html" method="GET">
-			
-		     <label>Usuario:</label>
-		     <input type="text" name="nome" id="nome" placeholder=" digite seu nome" required>
-		          
-		      <label>senha:</label>
-		      <input type="password" name="senha" id="senha" placeholder="digite sua senha" required>
-		     
-			  <div class="semlogin" >
-				<div >
-                  <button type="submit" class="botaoentrar">Entrar</button>
-              </div>
-				<a href="index.html">continuar sem login</a>
-			  </div> 
-	</form>
-</div>
 
+    <div class="login">
+    	<form id="form-login" action="index.html" method="GET">
+			<label for="nome">Usuário:</label>
+		    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+		          
+		    <label for="senha">Senha:</label>
+		    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+		     
+			<div>
+                <button type="submit" class="botaoentrar">Entrar</button>
+            </div>
+            <p id="erro-login" style="color: red;"></p>
+	    </form>
+
+	    <div class="cadastro">
+            <a href="criarlogin.html">Criar login</a>
+        </div>
+		<div class="semlogin">
+			<a href="index.html">Continuar sem login</a>
+	    </div> 
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
 

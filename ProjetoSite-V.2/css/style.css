@@ -1,4 +1,8 @@
+/*feito dia 01*/
+
+
 body{
+    font-size: 150%;/*deu erro*/
     font-family: "Shadows Into Light", cursive;
     background-color: #000000;
     color: #fff;
@@ -52,7 +56,7 @@ body{
 
 
 .divtelainicial{
-    font-size: 2rem;
+
 }
 
 .links a{
@@ -72,10 +76,7 @@ body{
 
 .semlogin{
     margin-top: 10px;
-}
-
-.semlogin a{
-    color: rgba(14, 24, 170, 0.815);
+    
 }
 
 .divtelacadastro{
@@ -108,7 +109,7 @@ input {
     padding: 5px;
 }
 
-.botao{
+.botaocadastrar{
     background-color: #53c053;
     color: #000000;
     font-size: 1rem;
@@ -121,9 +122,10 @@ input {
     border: none;  
 }
 
-.botao:hover {
+.botaocadastrar:hover {
     background-color: #53c05380;
 }
+
 .botaoentrar{
     background-color: #fbff00ab;
     color: #000000; 
@@ -193,6 +195,70 @@ input {
     background-color: #555;
 }
 
+/** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.lateral {
+    width: 245px;
+    height: 100vh;
+    background-color: #333;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: -230px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.lateral:hover {
+    left: 0;
+}
+
+.lateral h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.menu-links,
+.menu-cadastro {
+    list-style-type: none;
+}
+
+.menu-links li,
+.menu-cadastro li {
+    margin-bottom: 15px;
+}
+
+.menu-links li a,
+.menu-cadastro li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    padding: 10px;
+    background-color: #b8b8b8;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.menu-links li a:hover,
+.menu-cadastro li a:hover {
+    background-color: #555;
+}
+
+/* Para manter o "Cadastrar" na parte inferior *
+.menu-cadastro {
+    margin-top: auto;
+}
+*/
+
 
 .parallax-image {
     height: 600px; 
@@ -209,19 +275,64 @@ input {
     text-align: center;
 }
 
-h1 {
+.content h1 {
     font-size: 32px;
     margin-bottom: 20px;
 }
 
-h2 {
+.content h2 {
     font-size: 24px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-p {
+.content p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+}
+
+#comentarios {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ccc;
+}
+
+#comentarios h2 {
+    margin-bottom: 20px;
+}
+
+#form-comentarios label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#form-comentarios input,
+#form-comentarios textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#form-comentarios button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-comentarios button:hover {
+    background-color: #45a049;
+}
+
+/* Lista de comentários */
+#lista-comentarios {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
 }
