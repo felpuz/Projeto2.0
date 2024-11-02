@@ -27,15 +27,30 @@
             <p id="erro-login" style="color: red;"></p>
 	    </form>
 
-	    <div class="cadastro">
-            <a href="criarlogin.html">Criar login</a>
-        </div>
-		<div class="semlogin">
-			<a href="index.html">Continuar sem login</a>
+
+
+	    <div class="linklogin">
+            <a href="criarlogin.html">Criar login</a> | <a href="index.html">Continuar sem login</a>
 	    </div> 
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+	
+    <script>
+        // Preencher os campos com os dados salvos
+        window.onload = function() {
+            const nomeSalvo = localStorage.getItem("usuarioNome");
+            const senhaSalva = localStorage.getItem("usuarioSenha");
+
+            if (nomeSalvo) {
+                document.getElementById("nome").value = nomeSalvo;
+            }
+            if (senhaSalva) {
+                document.getElementById("senha").value = senhaSalva;
+            }
+        }
+    </script>
+	
 </body>
 </html>
 

@@ -54,11 +54,6 @@ body{
     border-radius: 10px;
 }
 
-
-.divtelainicial{
-
-}
-
 .links a{
     background-color: #b8b8b8;
     color: #000000;
@@ -195,71 +190,6 @@ input {
     background-color: #555;
 }
 
-/** {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.lateral {
-    width: 245px;
-    height: 100vh;
-    background-color: #333;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: -230px;
-    transition: left 0.3s ease;
-    z-index: 1000;
-}
-
-.lateral:hover {
-    left: 0;
-}
-
-.lateral h2 {
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.menu-links,
-.menu-cadastro {
-    list-style-type: none;
-}
-
-.menu-links li,
-.menu-cadastro li {
-    margin-bottom: 15px;
-}
-
-.menu-links li a,
-.menu-cadastro li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    padding: 10px;
-    background-color: #b8b8b8;
-    border-radius: 15px;
-    transition: background-color 0.3s;
-}
-
-.menu-links li a:hover,
-.menu-cadastro li a:hover {
-    background-color: #555;
-}
-
-/* Para manter o "Cadastrar" na parte inferior *
-.menu-cadastro {
-    margin-top: auto;
-}
-*/
-
-
 .parallax-image {
     height: 600px; 
     background-attachment: fixed;
@@ -330,9 +260,15 @@ body {
     background-color: #45a049;
 }
 
-/* Lista de comentários */
 #lista-comentarios {
     margin-top: 20px;
     padding: 10px;
     border-top: 1px solid #ddd;
 }
+
+.caixasdeentrada{
+    margin-top: 100px;
+    margin-bottom: 23px;
+}
+
+/*quando o usuario sem login for fazer um comentario, quando clicar em comentar ele seja redirecionado ao tela de cadastramento onde tem nome, idade, cpf e email, caso ele ja tenha ele possa comentar sem ser redirecionado a tela de cadastramento*/

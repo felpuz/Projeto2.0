@@ -12,20 +12,49 @@
 
     <div class="cadastro">
         <form id="form-createlogin">
-            <label for="novo-nome">Nome:</label>
-            <input type="text" id="novo-nome" name="nome" required>
-
-            <label for="nova-senha">Senha:</label>
-            <input type="password" id="nova-senha" name="senha" required>
+            <div class="caixasdeentrada">
+                <label for="novo-nome">Nome:</label>
+                <input type="text" id="novo-nome" name="nome" required>
+    
+                <label for="nova-senha">Senha:</label>
+                <input type="password" id="nova-senha" name="senha" required>
+            </div>
 
             <div class="links">
-                <button type="submit" class="botaocadastrar"    >Cadastrar</button>
+                <button type="submit" class="botaocadastrar">Cadastrar</button>
                 <a href="index.html">Voltar</a>
             </div>
         </form>
+        <p id="mensagem" style="color: green;"></p>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // Função para cadastrar usuário e salvar no localStorage
+        function cadastrarUsuario(nome, senha) {
+            localStorage.setItem("usuarioNome", nome);
+            localStorage.setItem("usuarioSenha", senha);
+            
+            // Exibir mensagem de sucesso
+            const mensagem = document.getElementById("mensagem");
+            mensagem.textContent = "Cadastro realizado com sucesso! Redirecionando para a tela de login...";
+            
+            // Redirecionar após um pequeno delay para que o usuário veja a mensagem
+            setTimeout(() => {
+                window.location.href = "telalogin.html"; 
+            }, 2000); // 2000 milissegundos = 2 segundos
+        }
+    
+        // Evento para o formulário de cadastro
+        document.getElementById("form-cadastro")?.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const nome = document.getElementById("nome").value;
+            const senha = document.getElementById("senha").value;
+            cadastrarUsuario(nome, senha);
+        });
+    </script>
+    
 
 </body>
 </html>
