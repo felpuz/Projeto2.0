@@ -8,16 +8,17 @@
     <meta charset="utf-8">
     <title>Criar login</title>
 </head>
-<body>
+<body class="corpo1">
 
     <div class="cadastro">
         <form id="form-createlogin">
             <div class="caixasdeentrada">
+                <h5>Após o login, a página será reiniciado</h5>
                 <label for="novo-nome">Nome:</label>
-                <input type="text" id="novo-nome" name="nome" required>
+                <input type="text" id="novo-nome" name="nome" placeholder="digite seu nome" required>
     
                 <label for="nova-senha">Senha:</label>
-                <input type="password" id="nova-senha" name="senha" required>
+                <input type="password" id="nova-senha" name="senha" placeholder="digite sua nova senha" required>
             </div>
 
             <div class="links">
@@ -28,13 +29,11 @@
         <p id="mensagem" style="color: green;"></p>
     </div>
 
-    <script src="js/script.js"></script>
-
     <script>
         // Função para cadastrar usuário e salvar no localStorage
-        function cadastrarUsuario(nome, senha) {
-            localStorage.setItem("usuarioNome", nome);
-            localStorage.setItem("usuarioSenha", senha);
+        function cadastrarUsuario(nomeLogin, senha) {
+            localStorage.setItem("usuarioNome", nomeLogin); // Salva o nome de login
+            localStorage.setItem("usuarioSenha", senha); // Salva a senha
             
             // Exibir mensagem de sucesso
             const mensagem = document.getElementById("mensagem");
@@ -47,14 +46,16 @@
         }
     
         // Evento para o formulário de cadastro
-        document.getElementById("form-cadastro")?.addEventListener("submit", function(event) {
+        document.getElementById("form-createlogin")?.addEventListener("submit", function(event) {
             event.preventDefault();
-            const nome = document.getElementById("nome").value;
-            const senha = document.getElementById("senha").value;
-            cadastrarUsuario(nome, senha);
+            const nomeLogin = document.getElementById("novo-nome").value; // Nome de login
+            const senha = document.getElementById("nova-senha").value; // Senha
+            cadastrarUsuario(nomeLogin, senha);
         });
     </script>
     
 
 </body>
 </html>
+
+

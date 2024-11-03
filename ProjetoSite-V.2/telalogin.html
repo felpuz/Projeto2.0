@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
 </head>
-<body>
+<body class="corpo">
 
     <div class="imagemfundo"></div>
 
     <div class="login">
-    	<form id="form-login" action="index.html" method="GET">
-			<label for="nome">Usuário:</label>
-		    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
-		          
-		    <label for="senha">Senha:</label>
-		    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-		     
-			<div>
+        <form id="form-login" action="index.html" method="GET">
+            <label for="nome">Usuário:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                  
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+             
+            <div>
                 <button type="submit" class="botaoentrar">Entrar</button>
             </div>
             <p id="erro-login" style="color: red;"></p>
-	    </form>
+        </form>
 
-
-
-	    <div class="linklogin">
-            <a href="criarlogin.html">Criar login</a> | <a href="index.html">Continuar sem login</a>
-	    </div> 
+        <div class="linklogin">
+            <a href="criarlogin.html">Criar login</a><br>
+            <a href="index.html" id="continuar-sem-login">Continuar sem login</a>
+        </div> 
     </div>
 
-    <script src="js/script.js"></script>
-	
     <script>
-        // Preencher os campos com os dados salvos
+        // Preencher os campos com os dados salvos no localStorage
         window.onload = function() {
             const nomeSalvo = localStorage.getItem("usuarioNome");
             const senhaSalva = localStorage.getItem("usuarioSenha");
@@ -48,9 +45,35 @@
             if (senhaSalva) {
                 document.getElementById("senha").value = senhaSalva;
             }
+        };
+
+        // Evento de login
+        document.getElementById("form-login")?.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const nome = document.getElementById("nome").value;
+            const senha = document.getElementById("senha").value;
+            validarLogin(nome, senha);
+        });
+
+        // Função para validar login com base nos dados salvos
+        function validarLogin(nome, senha) {
+            const nomeSalvo = localStorage.getItem("usuarioNome");
+            const senhaSalva = localStorage.getItem("usuarioSenha");
+
+            if (nome === nomeSalvo && senha === senhaSalva) {
+                alert("Login realizado com sucesso!");
+                window.location.href = "index.html";
+            } else {
+                alert("Nome ou senha incorretos. Tente novamente.");
+            }
         }
+        
+        // Evento para continuar sem login
+        document.getElementById("continuar-sem-login").addEventListener("click", function() {
+            localStorage.removeItem("usuarioNome"); // Garante que o nome do usuário não esteja salvo
+            localStorage.removeItem("usuarioSenha"); // Garante que a senha do usuário não esteja salva
+        });
     </script>
-	
+
 </body>
 </html>
-
